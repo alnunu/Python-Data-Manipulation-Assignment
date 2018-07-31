@@ -23,12 +23,12 @@ with open(path_file, newline="") as csvfile:
         # Create list of revenues and dates to calculate changes later
         rev_list.append(row[1])
         date_list.append(row[0])
-        
+
 # Create difference in revenue list
 for i in range(1,len(rev_list)):
     revdif.append(int(rev_list[i]) - int(rev_list[i-1])) 
-    #calculate average change 
-    avg_change = sum(revdif)/len(revdif)
+    #calculate average change and round to two decimal points
+    avg_change = format((sum(revdif)/len(revdif)), '.2f')
     #calculate max and min revenue change values
     greatest_profit = max(revdif)
     largest_loss = min(revdif)
