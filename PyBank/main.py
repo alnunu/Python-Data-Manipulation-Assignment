@@ -33,8 +33,8 @@ for i in range(1,len(rev_list)):
     greatest_profit = max(revdif)
     largest_loss = min(revdif)
     #retrieve date
-    greatest_profit_month = str(date_list[revdif.index(max(revdif))])
-    largest_loss_month = str(date_list[revdif.index(min(revdif))])
+    greatest_profit_month = str(date_list[revdif.index(max(revdif))+1])
+    largest_loss_month = str(date_list[revdif.index(min(revdif))+1])
 
 #Print Analysis
 print("Financial Analysis")
