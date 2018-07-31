@@ -36,7 +36,7 @@ for i in range(1,len(rev_list)):
     greatest_profit_month = str(date_list[revdif.index(max(revdif))+1])
     largest_loss_month = str(date_list[revdif.index(min(revdif))+1])
 
-#Print Analysis
+#Print Analysis for terminal
 print("Financial Analysis")
 print("----------------------------")
 print("Total Months: " + str(month_count))
