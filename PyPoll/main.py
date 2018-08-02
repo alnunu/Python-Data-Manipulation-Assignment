@@ -35,3 +35,15 @@ for candidate, vote in Counter(candidate_list).items():
     print(candidate + ": " + "{:.3%}".format(vote/vote_count) +" (" + str(vote) + ")")
 print("-------------------------")
 print("Winner: " + (winner))
+
+#create txt file
+file = open("PyPoll.txt","w")
+file.write("Election Results\n")
+file.write("-------------------------\n")
+file.write("Total Votes: " + str(vote_count) + "\n")
+file.write("-------------------------\n")
+for candidate, vote in Counter(candidate_list).items():
+    file.write(candidate + ": " + "{:.3%}".format(vote/vote_count) + " (" + str(vote) + ")\n")
+file.write("-------------------------\n")
+file.write("Winner: " + (winner))
+file.close()
