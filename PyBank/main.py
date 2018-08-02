@@ -7,7 +7,7 @@ total_pl = 0
 rev_list = []
 revdif = []
 date_list = []
-path_file = '../alnunu/repos/python-challenge/budget_data.csv'
+path_file = '/Users/alnunu/repos/python-challenge/budget_data.csv'
 
 # Open and read csv
 with open(path_file, newline="") as csvfile:
@@ -20,12 +20,12 @@ with open(path_file, newline="") as csvfile:
         month_count = month_count+1
         # Calculate total profit and loss
         total_pl=total_pl + int(row[1])
-        # Create list of revenues and dates to calculate changes later
+        # Create list of revenues to calculate change later
         rev_list.append(row[1])
         date_list.append(row[0])
 
 # Create difference in revenue list
-for i in range(1,len(rev_list)):
+for i in range(1,month_count):
     revdif.append(int(rev_list[i]) - int(rev_list[i-1])) 
     #calculate average change and round to two decimal points
     avg_change = format((sum(revdif)/len(revdif)), '.2f')
@@ -36,7 +36,7 @@ for i in range(1,len(rev_list)):
     greatest_profit_month = str(date_list[revdif.index(max(revdif))+1])
     largest_loss_month = str(date_list[revdif.index(min(revdif))+1])
 
-#Print Analysis for terminal
+#Print Analysis
 print("Financial Analysis")
 print("----------------------------")
 print("Total Months: " + str(month_count))
