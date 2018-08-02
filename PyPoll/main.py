@@ -20,13 +20,18 @@ with open(path_file, newline="") as csvfile:
         # Create list of candidates
         candidate_list.append(row[2])
 
- #print vote analysis
+#deteriming winning candidate
+v = list(Counter(candidate_list).values())
+k = list(Counter(candidate_list).keys())
+winner = k[v.index(max(v))]
+
+#print vote analysis
 print("Election Results")
 print("-------------------------")
 print("Total Votes: " + str(vote_count))
 print("-------------------------")
 # find/print unique values in candidate list and count candidate vote frequency
-for candidates, vote in Counter(candidate_list).items():
-    print(candidates + ": " + "{:.3%}".format(vote/vote_count) +" (" + str(vote) + ")")
+for candidate, vote in Counter(candidate_list).items():
+    print(candidate + ": " + "{:.3%}".format(vote/vote_count) +" (" + str(vote) + ")")
 print("-------------------------")
-print("Winner: ")
+print("Winner: " + (winner))
