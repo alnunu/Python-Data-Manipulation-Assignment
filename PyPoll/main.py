@@ -6,7 +6,7 @@ from collections import Counter
 # Assigning initial variables
 vote_count = 0
 candidate_list = []
-path_file = '/Users/alnunu/repos/python-challenge/election_data.csv'
+path_file = '/Users/alnunu/repos/bootcamp_hmwk_3/python-challenge/election_data.csv'
 
 # Open and read csv
 with open(path_file, newline="") as csvfile:

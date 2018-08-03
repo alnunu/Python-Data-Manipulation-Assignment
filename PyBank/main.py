@@ -7,7 +7,7 @@ total_pl = 0
 rev_list = []
 revdif = []
 date_list = []
-path_file = '/Users/alnunu/repos/python-challenge/budget_data.csv'
+path_file = '/Users/alnunu/repos/bootcamp_hmwk_3/python-challenge/election_data.csv'
 
 # Open and read csv
 with open(path_file, newline="") as csvfile:
