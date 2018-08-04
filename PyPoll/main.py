@@ -6,6 +6,7 @@ from collections import Counter
 # Assigning initial variables
 vote_count = 0
 candidate_list = []
+### TO TEST SET PATH FOR CSV FILE ###
 path_file = '/Users/alnunu/repos/bootcamp_hmwk_3/python-challenge/election_data.csv'
 
 # Open and read csv
